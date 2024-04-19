@@ -18,7 +18,7 @@ export default function Home() {
         <Encryption />
         <Services />
         <Features />
-        <Projects />
+        {/* <Projects /> */}
         <Testimonial />
       </div>
     </main>
