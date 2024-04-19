@@ -40,7 +40,7 @@ export default function Navbar() {
     return (
         <>
             <header
-                className="bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl sticky top-0"
+                className="bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl fixed top-0 w-full"
                 style={{ zIndex: "99" }}
             >
                 <div className="container mx-auto flex flex-row flex-wrap p-3 md:justify-normal justify-between items-center">
