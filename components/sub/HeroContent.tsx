@@ -20,7 +20,7 @@ const HeroContent = () => {
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+          className="Welcome-box w-min whitespace-nowrap flex flex-row items-center justify-start py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] backdrop-blur-xl rounded-md"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
@@ -50,10 +50,9 @@ const HeroContent = () => {
           Mobile, and Software development. Check out my projects and skills.
         </motion.p>
         <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        >
-          Learn More!
+          href='/'
+          className="inline-flex h-12 w-min whitespace-nowrap animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+          Hire us now
         </motion.a>
       </div>
 
