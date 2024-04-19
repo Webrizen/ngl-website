@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+// Animation variants
 const titleAnimation = {
     rest: {
         transition: {
@@ -46,50 +47,39 @@ const letterAnimationTwo = {
 
 export default function AnimatedLink({ title, link }: any) {
     const [isHovered, setHovered] = useState(false);
+
+    // Animated Letter component
     const AnimatedLetter = ({ character, animation }: any) => {
         return (
-            <motion.span
-                variants={animation}
-                className="relative inline-block whitespace-nowrap"
-            >
+            <motion.span variants={animation} className="relative inline-block whitespace-nowrap">
                 {character}
             </motion.span>
         );
     };
-    
-    const AnimatedWord = ({ title, animation } : any) => {
+
+    // Animated Word component
+    const AnimatedWord = ({ title, animation }: any) => {
         return (
-            <motion.span
-                variants={titleAnimation}
-                initial="rest"
-                animate={isHovered ? "hover" : "rest"}
-                className="whitespace-nowrap relative"
-            >
-                {title
-                    .split("")
-                    .map((character : any, i : any) =>
-                        character === " " ? (
-                            <span key={i}>&nbsp;</span>
-                        ) : (
-                            <AnimatedLetter character={character} animation={animation} />
-                        )
-                    )}
+            <motion.span variants={titleAnimation} initial="rest" animate={isHovered ? "hover" : "rest"} className="whitespace-nowrap relative">
+                {title.split("").map((character: string, i: number) =>
+                    character === " " ? (
+                        <span key={i}>&nbsp;</span>
+                    ) : (
+                        <AnimatedLetter key={i} character={character} animation={animation} />
+                    )
+                )}
             </motion.span>
         );
     };
 
     return (
         <Link href={link} className="lg:inline-flex lg:w-auto px-3 py-2 rounded text-slate-700 dark:text-slate-300 dark:hover:text-green-500 items-center hover:text-blue-500 justify-center hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)]">
-            <motion.div
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            className="relative overflow-hidden cursor-pointer w-full h-full"
-        >
-            <AnimatedWord title={title} animation={letterAnimation} />
-            <div className="absolute top-0 w-full h-full">
-                <AnimatedWord title={title} animation={letterAnimationTwo} />
-            </div>
-        </motion.div>
+            <motion.div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} className="relative overflow-hidden cursor-pointer w-full h-full">
+                <AnimatedWord title={title} animation={letterAnimation} />
+                <div className="absolute top-0 w-full h-full">
+                    <AnimatedWord title={title} animation={letterAnimationTwo} />
+                </div>
+            </motion.div>
         </Link>
     );
 }
