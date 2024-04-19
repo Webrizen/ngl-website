@@ -95,7 +95,7 @@ export default function Features() {
                             animate={inView ? "visible" : "hidden"}
                             variants={fadeInFromBottom}
                             transition={{ delay: 0.4, duration: 0.7 }}
-                            className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we're transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</motion.p>
+                            className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we are transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</motion.p>
                             <img src="/4.png" alt="Image" className='w-[300px] h-[300px] aspect-square absolute right-2 top-0 bottom-0 my-auto' />
                     </div>
                     <div className="mt-16 flex flex-col md:flex-row gap-8 xl:gap-10">
