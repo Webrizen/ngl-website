@@ -126,7 +126,7 @@ const Header: React.FC<HeaderProps> = () => {
         animate={inView ? "visible" : "hidden"}
         variants={fadeInFromBottom}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="text-2xl md:text-7xl font-bold bg-gradient-to-r from-purple-500 to-cyan-500 text-transparent bg-clip-text">
+        className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-500 to-cyan-500 text-transparent bg-clip-text">
         The Ultimate <br /> Destination For Your Needs.
       </motion.h1>
       <motion.p
