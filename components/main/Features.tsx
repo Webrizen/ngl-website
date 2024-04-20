@@ -36,17 +36,6 @@ export default function Features() {
         }
     ];
 
-    useEffect(() => {
-        // Set up an interval to change the selected feature every 30 seconds
-        const id = setInterval(() => {
-            setSelectedFeature(prevFeature => (prevFeature + 1) % features.length);
-        }, 10000);
-        setIntervalId(id);
-
-        // Clean up the interval on component unmount
-        return () => clearInterval(intervalId!);
-    }, []);
-
     const handleFeatureClick = (index: number) => {
         setSelectedFeature(index);
     };
