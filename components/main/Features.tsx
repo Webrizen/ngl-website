@@ -81,10 +81,6 @@ export default function Features() {
                                 <motion.div
                                     key={index}
                                     className={`cursor-pointer relative p-3 before:rounded-md rounded-md backdrop-blur-lg space-y-3 before:absolute before:transition-all ${selectedFeature === index ? 'before:ease-linear before:scale-x-105 before:scale-y-110 before:inset-0 before:bg-gradient-to-b from-cyan-500 to-blue-500 text-white' : 'hover:before:ease-linear hover:before:scale-x-105 hover:before:scale-y-110 before:inset-0 hover:before:bg-gray-100 hover:before:dark:bg-gray-900'}`}
-                                    initial="hidden"
-                                    animate={inView ? "visible" : "hidden"}
-                                    variants={fadeInFromBottom}
-                                    transition={{ delay: 0.2 * index, duration: 0.7 }}
                                     onClick={() => handleFeatureClick(index)}
                                     whileHover={{ scale: selectedFeature === index ? 1 : 0.95 }}
                                     whileTap={{ scale: 0.95 }}
@@ -93,10 +89,6 @@ export default function Features() {
                                     }}
                                 >
                                     <motion.h2
-                                        initial="hidden"
-                                        animate={inView ? "visible" : "hidden"}
-                                        variants={fadeInLeft}
-                                        transition={{ delay: 0.5, duration: 0.8 }}
                                         className="text-xl font-semibold text-gray-900 dark:text-white relative">
                                         {feature.title}
                                     </motion.h2>
@@ -117,10 +109,6 @@ export default function Features() {
                                 transition={{ type: "spring", stiffness: 120, damping: 15 }}
                             >
                                 <motion.img
-                                    initial="hidden"
-                                    animate={inView ? "visible" : "hidden"}
-                                    variants={fadeInFromRight}
-                                    transition={{ delay: 0.2, duration: 0.5 }}
                                     src={`${features[selectedFeature]?.imageUrl || "https://placehold.co/1500x1000"}`}
                                     alt="illustration"
                                     width={1800}
