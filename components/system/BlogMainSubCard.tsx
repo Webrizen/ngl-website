@@ -11,7 +11,7 @@ function BlogMainSubCard({ topic, title, src, href }: any) {
             style={{ zIndex: 20 }}
           >
             <div
-              className={` bg-btnbg z-20 text-white px-5 py-2 rounded-[20px]`}
+              className={`bg-[rgba(0,0,0,0.1)] z-20 text-white px-5 py-2 rounded-[20px]`}
             >
               {topic}
             </div>
