@@ -30,9 +30,9 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="py-32 min-h-screen w-full dark:bg-gray-950">
+        <section className="py-32 min-h-screen w-full ">
             <div className="md:container w-full mx-auto">
-                <div className="flex flex-col  space-y-16 px-5 sm:px-16 md:px-20 lg:px-28 py-8 dark:bg-gray-950">
+                <div className="flex flex-col  space-y-16 px-5 sm:px-16 md:px-20 lg:px-28 py-8">
                     <div className="flex flex-col justify-center text-center mx-auto md:max-w-3xl max-w-full space-y-5">
                         <span className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs w-max mx-auto font-semibold tracking-wide text-blue-700 dark:text-white md:whitespace-nowrap whitespace-pre text-center">Custom Design & Development for Your Business</span>
                         <h1 className="text-3xl servicesh2 font-bold text-blue-950 dark:text-white md:text-5xl leading-tight">

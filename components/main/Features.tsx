@@ -73,7 +73,7 @@ export default function Features() {
 
     return (
         <>
-            <section className="py-20  dark:bg-gray-950" ref={ref}>
+            <section className="py-20 " ref={ref}>
                 <div className="max-w-7xl mx-auto relative px-5 sm:px-10 md:px-12 lg:px-5 overflow-hidden">
                     <div className="flex flex-col gap-5 relative">
                         <div className="space-y-4 max-w-xl">
