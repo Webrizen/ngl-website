@@ -60,7 +60,7 @@ const HeroParallax: React.FC<HeroParallaxProps> = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[300vh] bg-gray-950 py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[350vh] h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div

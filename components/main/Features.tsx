@@ -77,26 +77,14 @@ export default function Features() {
                 <div className="max-w-7xl mx-auto relative px-5 sm:px-10 md:px-12 lg:px-5 overflow-hidden">
                     <div className="flex flex-col gap-5 relative">
                         <div className="space-y-4 max-w-xl">
-                            <motion.span
-                                initial="hidden"
-                                animate={inView ? "visible" : "hidden"}
-                                variants={fadeInFromBottom}
-                                transition={{ delay: 0.2, duration: 0.5 }}
-                                className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs font-semibold tracking-wide text-blue-700 dark:text-gray-100">Feature</motion.span>
-                            <motion.h1
-                                initial="hidden"
-                                animate={inView ? "visible" : "hidden"}
-                                variants={fadeInFromBottom}
-                                transition={{ delay: 0.3, duration: 0.6 }}
-                                className="md:text-6xl font-bold bg-gradient-to-br from-indigo-500 to-fuchsia-500 bg-clip-text text-transparent text-6xl leading-tight">Why Choose Neo Great Line?</motion.h1>
+                            <span
+                                className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs font-semibold tracking-wide text-blue-700 dark:text-gray-100">Feature</span>
+                            <h1
+                                className="md:text-6xl font-bold bg-gradient-to-br from-indigo-500 to-fuchsia-500 bg-clip-text text-transparent text-6xl leading-tight">Why Choose Neo Great Line?</h1>
                         </div>
-                        <motion.p
-                            initial="hidden"
-                            animate={inView ? "visible" : "hidden"}
-                            variants={fadeInFromBottom}
-                            transition={{ delay: 0.4, duration: 0.7 }}
-                            className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we are transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</motion.p>
-                            <img src="/4.png" alt="Image" className='md:w-[300px] w-[150px] md:h-[300px] h-[150px] aspect-square absolute right-2 md:top-0 -top-[70%]  bottom-0 my-auto' />
+                        <p
+                            className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we are transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</p>
+                        <img src="/4.png" alt="Image" className='md:w-[300px] w-[150px] md:h-[300px] h-[150px] aspect-square absolute right-2 md:top-0 -top-[70%]  bottom-0 my-auto' />
                     </div>
                     <div className="mt-16 flex flex-col md:flex-row gap-8 xl:gap-10">
                         <div className="md:w-96 lg:w-[26rem] space-y-5 flex flex-col md:py-6">
