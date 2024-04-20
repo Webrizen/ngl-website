@@ -37,7 +37,7 @@ export default function Services() {
                     <div className="flex flex-col justify-center text-center mx-auto md:max-w-3xl max-w-full space-y-5">
                         <span className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs w-max mx-auto font-semibold tracking-wide text-blue-700 dark:text-white md:whitespace-nowrap whitespace-pre text-center">Custom Design & Development for Your Business</span>
                         <h1 className="text-3xl servicesh2 font-bold text-blue-950 dark:text-white md:text-5xl leading-tight">
-                            Choose the Perfect Technology Solution for Your Business
+                            Choose the Perfect <span className="bg-gradient-to-br from-indigo-500 to-fuchsia-500 bg-clip-text text-transparent">Technology Solution </span> for Your Business
                         </h1>
                     </div>
                     <div className="mt-12 grid grid-cols-1 gap-6 text-left md:grid-cols-3 w-full">

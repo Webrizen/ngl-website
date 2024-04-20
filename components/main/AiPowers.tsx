@@ -5,9 +5,10 @@ import { useRef } from "react";
 const AiPowers = () => {
   return (
     <>
-      <div className="flex items-center justify-center">
-        <h1 className="md:text-4xl text-3xl font-bold text-center uppercase text-slate-100">
-        Transforming Your Vision into <br /> Digital Reality
+      <div className="flex items-center flex-col gap-3 text-center justify-center">
+        <span className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs w-max mx-auto font-semibold tracking-wide text-blue-700 dark:text-white md:whitespace-nowrap whitespace-pre text-center">Custom Design & Development using AI</span>
+        <h1 className="text-3xl servicesh2 font-bold text-blue-950 dark:text-white md:text-5xl leading-tight">
+          Choose the Perfect <span className="bg-gradient-to-br from-indigo-500 to-fuchsia-500 bg-clip-text text-transparent">AI Technology</span> <br /> for Your Business
         </h1>
       </div>
       <HorizontalScrollCarousel />
