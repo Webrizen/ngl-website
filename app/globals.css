@@ -37,3 +37,21 @@
   animation: moveUpDown 3s ease infinite;
   /* Adjust the duration of the animation */
 }
+
+/* custom y scrollbar design */
+
+.custom_y_scrollbar_design::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom_y_scrollbar_design::-webkit-scrollbar-track {
+  background: #1D1D1F;
+}
+
+.custom_y_scrollbar_design::-webkit-scrollbar-thumb {
+  background: #343537;
+}
+
+.custom_y_scrollbar_design::-webkit-scrollbar-thumb:hover {
+  background: #48494A;
+}

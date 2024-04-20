@@ -7,6 +7,9 @@ import PartCardImg4 from "@/public/Patd-Card/4.jpg";
 import BlogMainSubCard from '@/components/system/BlogMainSubCard';
 import MainCard from '@/components/system/MainCard';
 import FeturedPost from '@/components/system/FeturedPost';
+import PopularVideos from '@/components/system/PopularVideos';
+import LatestArticles from '@/components/system/LatestArticles';
+import TopStories from '@/components/system/TopStories';
 
 export default function page() {
   const data = [
@@ -72,6 +75,9 @@ export default function page() {
         </div>
       </section>
       <FeturedPost />
+      <PopularVideos />
+      <LatestArticles />
+      <TopStories />
     </>
   )
 }
