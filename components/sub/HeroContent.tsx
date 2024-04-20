@@ -33,7 +33,7 @@ const HeroContent = () => {
           className="flex flex-col gap-6 mt-6 md:text-6xl text-5xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-          We Craft
+            We Craft
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
               Beautiful Websites{" "}
@@ -48,15 +48,14 @@ const HeroContent = () => {
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
         </motion.p>
-        <div className="relative inline-flex w-min whitespace-nowrap group">
-        <div
-            className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+        <div className="group relative w-fit transition-transform duration-300 active:scale-95">
+          <button className="relative z-10 rounded-lg bg-gradient-to-br from-indigo-500 to-fuchsia-500 p-0.5 duration-300 group-hover:scale-110">
+            <span className="block rounded-md bg-slate-950 px-4 py-2 font-semibold text-slate-100 duration-300 group-hover:bg-slate-950/50 group-hover:text-slate-50 group-active:bg-slate-950/80">
+              Hire us now
+            </span>
+          </button>
+          <span className="pointer-events-none absolute -inset-4 z-0 transform-gpu rounded-2xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 opacity-30 blur-xl transition-all duration-300 group-hover:opacity-90 group-active:opacity-50"></span>
         </div>
-        <a href="#" title="Get quote now"
-            className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-            role="button">Hire us now
-        </a>
-    </div>
       </div>
 
       <motion.div
