@@ -1,52 +1,21 @@
 "use client";
 import { useState } from "react";
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
 import Link from "next/link";
-import { Moon, Sun } from "lucide-react";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { useTheme } from "next-themes";
-import AnimatedLink from "../ui/AnimatedLink";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { setTheme } = useTheme();
     return (
         <>
             <header
                 className="bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl fixed top-0 w-full"
                 style={{ zIndex: "99" }}
             >
-                <div className="container mx-auto flex flex-row flex-wrap p-3 md:justify-normal justify-between items-center">
+                <div className="container mx-auto flex flex-row flex-wrap p-3 md:py-4 justify-between items-center">
                     <Link
                         href="/"
-                        className="flex title-font font-medium items-center text-slate-700 mr-4 border-r-none md:border-r border-slate-300 pr-4 md:mb-0"
+                        className="flex title-font font-medium items-center text-slate-700 mr-4 pr-4 md:mb-0"
                     >
                         <img
                             src="/logo.png"
@@ -55,106 +24,23 @@ export default function Navbar() {
                         />
                     </Link>
                     <nav
-                        className={`lg:flex lg:flex-row flex-col flex-grow md:relative absolute md:w-auto w-full left-0 right-0 md:top-auto top-16 z-50 text-sm items-center ${isMenuOpen ? "grid grid-cols-2 bg-white dark:bg-slate-900 p-4" : " hidden"
+                        className={`lg:flex lg:flex-row flex-col gap-3 justify-end md:relative absolute md:w-auto w-full left-0 right-0 md:top-auto top-16 z-50 text-sm items-center ${isMenuOpen ? "grid grid-cols-2 bg-white dark:bg-slate-900 p-4" : " hidden"
                             }`}
                     >
-                        <AnimatedLink title="Home" link="/" />
-                        <AnimatedLink title="About" link="/about" />
-                        <NavigationMenu>
-                            <NavigationMenuList>
-                                <NavigationMenuItem>
-                                    <NavigationMenuTrigger className="lg:inline-flex bg-transparent lg:w-auto px-3 py-2 rounded dark:text-slate-300 text-slate-700 items-center justify-center dark:bg-transparent hover:bg-slate-100">
-                                        Services
-                                    </NavigationMenuTrigger>
-                                    <NavigationMenuContent className="p-2 flex flex-col gap-1 whitespace-nowrap bg-white dark:bg-transparent shadow-lg rounded-lg">
-                                        <Link href="/services/web-development" legacyBehavior passHref>
-                                            <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                Web Development
-                                            </NavigationMenuLink>
-                                        </Link>
-                                        <Link href="/services/web-design" legacyBehavior passHref>
-                                            <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                Web Design
-                                            </NavigationMenuLink>
-                                        </Link>
-                                        <Accordion type="single" collapsible>
-                                            <AccordionItem value="item-1">
-                                                <AccordionTrigger className="w-full px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                    Marketing Services
-                                                </AccordionTrigger>
-                                                <AccordionContent className="flex flex-col w-full gap-0">
-                                                    <Link href="/services/seo" legacyBehavior passHref>
-                                                        <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                            Search Engine Optimization (SEO)
-                                                        </NavigationMenuLink>
-                                                    </Link>
-                                                    <Link href="/services/social-media" legacyBehavior passHref>
-                                                        <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                            Social Media Management
-                                                        </NavigationMenuLink>
-                                                    </Link>
-                                                    <Link href="/services/content-marketing" legacyBehavior passHref>
-                                                        <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                            Content Marketing
-                                                        </NavigationMenuLink>
-                                                    </Link>
-                                                </AccordionContent>
-                                            </AccordionItem>
-                                        </Accordion>
-                                        <Accordion type="single" collapsible>
-                                            <AccordionItem value="item-2">
-                                                <AccordionTrigger className="w-full px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                    E-commerce Solutions
-                                                </AccordionTrigger>
-                                                <AccordionContent className="flex flex-col w-full gap-0">
-                                                    <Link href="/services/e-commerce-website" legacyBehavior passHref>
-                                                        <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                            E-commerce Website Development
-                                                        </NavigationMenuLink>
-                                                    </Link>
-                                                    <Link href="/services/payment-gateway-integration" legacyBehavior passHref>
-                                                        <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                            Payment Gateway Integration
-                                                        </NavigationMenuLink>
-                                                    </Link>
-                                                    <Link href="/services/online-store-optimization" legacyBehavior passHref>
-                                                        <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                            Online Store Optimization
-                                                        </NavigationMenuLink>
-                                                    </Link>
-                                                </AccordionContent>
-                                            </AccordionItem>
-                                        </Accordion>
-                                        <Link href="/services/graphic-design" legacyBehavior passHref>
-                                            <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                Graphic Design
-                                            </NavigationMenuLink>
-                                        </Link>
-                                        <Link href="/services/logo-design" legacyBehavior passHref>
-                                            <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                Logo Design
-                                            </NavigationMenuLink>
-                                        </Link>
-                                        <Link href="/services/branding" legacyBehavior passHref>
-                                            <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                Branding Services
-                                            </NavigationMenuLink>
-                                        </Link>
-                                        <Link href="/services" legacyBehavior passHref>
-                                            <NavigationMenuLink className="px-3 py-2 hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded">
-                                                Additional Services
-                                            </NavigationMenuLink>
-                                        </Link>
-                                    </NavigationMenuContent>
-
-                                </NavigationMenuItem>
-                            </NavigationMenuList>
-                        </NavigationMenu>
-                        <AnimatedLink title="Portfolio" link="/portfolio" />
-                        <AnimatedLink title="Careers" link="/careers" />
-                        <AnimatedLink title="Contact" link="/contact" />
+                        <Button asChild className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5">
+                            <Link href="/">Home</Link>
+                        </Button>
+                        <Button asChild className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5">
+                            <Link href="/blogs">Blogs</Link>
+                        </Button>
+                        <Button asChild className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5">
+                            <Link href="/legal">Legal</Link>
+                        </Button>
+                        <Button asChild className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5">
+                            <Link href="/privacy-policy">Privacy Policy</Link>
+                        </Button>
                     </nav>
-                    <div className="flex justify-end items-center gap-1">
+                    <div className="md:hidden flex justify-end items-center gap-1">
                         {/* <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <Button variant="outline" size="icon">
@@ -175,60 +61,6 @@ export default function Navbar() {
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu> */}
-                        <Dialog>
-                            <DialogTrigger>
-                                <Button variant="outline" className="text-sm">
-                                    Schedule a meeting
-                                </Button>
-                            </DialogTrigger>
-                            <DialogContent>
-                                <DialogHeader>
-                                    <DialogTitle>
-                                        Schedule Your Meeting with NEO GREAT LINE
-                                    </DialogTitle>
-                                    <DialogDescription>
-                                        <form
-                                            className="flex flex-col gap-4 mt-4"
-                                            id="contactform"
-                                            action={`https://formsubmit.io/send/${process.env.NEXT_PUBLIC_FORMSUBMIT_TOKEN}`}
-                                            method="POST"
-                                        >
-                                            <input
-                                                type="text"
-                                                name="Name"
-                                                placeholder="Name"
-                                                className="py-3 px-4 border rounded"
-                                            />
-                                            <input
-                                                name="_redirect"
-                                                type="hidden"
-                                                id="name"
-                                                value="https://saa-global-next.vercel.app/success"
-                                            ></input>
-                                            <input
-                                                type="email"
-                                                name="Email"
-                                                placeholder="Email"
-                                                className="py-3 px-4 border rounded"
-                                            />
-                                            <input
-                                                type="time"
-                                                name="Time"
-                                                placeholder="time"
-                                                className="py-3 px-4 border rounded"
-                                            />
-                                            <input
-                                                type="date"
-                                                name="Date"
-                                                placeholder="date"
-                                                className="py-3 px-4 border rounded"
-                                            />
-                                            <Button type="submit">Connect</Button>
-                                        </form>
-                                    </DialogDescription>
-                                </DialogHeader>
-                            </DialogContent>
-                        </Dialog>
                         <button
                             className="inline-flex w-10 h-10 justify-center items-center hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded lg:hidden"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
