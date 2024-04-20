@@ -21,7 +21,9 @@ function BlogMainSubCard({ topic, title, src, href }: any) {
             style={{ zIndex: 10 }}
             className="z-10 rounded-[20px] w-full h-full object-cover opacity-90 ease-in hover:ease-out  hover:opacity-50  transition-all delay-100  hover:delay-100 duration-300 hover:duration-300 "
             src={src}
-            alt=""
+            width={500}
+            height={500}
+            alt="hmm"
           />
         </div>
         <div className="mt-5">
