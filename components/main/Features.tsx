@@ -69,7 +69,7 @@ export default function Features() {
                             <span
                                 className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs font-semibold tracking-wide text-blue-700 dark:text-gray-100">Feature</span>
                             <h1
-                                className="md:text-6xl font-bold bg-gradient-to-br from-indigo-500 to-fuchsia-500 bg-clip-text text-transparent text-6xl leading-tight">Why Choose Neo Great Line?</h1>
+                                className="md:text-6xl font-bold text-6xl leading-tight">Why Choose <br/><span className='bg-gradient-to-br from-indigo-500 to-fuchsia-500 bg-clip-text text-transparent'>Neo Great Line ?</span></h1>
                         </div>
                         <p
                             className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we are transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</p>
