@@ -88,7 +88,7 @@ export default function Features() {
                                 animate={inView ? "visible" : "hidden"}
                                 variants={fadeInFromBottom}
                                 transition={{ delay: 0.3, duration: 0.6 }}
-                                className="md:text-6xl font-bold from-cyan-600 via-green-600 to-slate-600 bg-gradient-to-r bg-clip-text text-transparent text-6xl leading-tight">Why Choose Neo Great Line?</motion.h1>
+                                className="md:text-6xl font-bold bg-gradient-to-br from-indigo-500 to-fuchsia-500 bg-clip-text text-transparent text-6xl leading-tight">Why Choose Neo Great Line?</motion.h1>
                         </div>
                         <motion.p
                             initial="hidden"
