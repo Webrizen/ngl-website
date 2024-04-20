@@ -24,19 +24,19 @@ export default function Navbar() {
                         />
                     </Link>
                     <nav
-                        className={`lg:flex lg:flex-row flex-col gap-3 justify-end md:relative absolute md:w-auto w-full left-0 right-0 md:top-auto top-16 z-50 text-sm items-center ${isMenuOpen ? "grid grid-cols-2 bg-white dark:bg-slate-900 p-4" : " hidden"
+                        className={`lg:flex lg:flex-row flex-col gap-3 justify-end md:relative absolute md:w-auto w-full left-0 right-0 md:top-auto top-16 z-50 text-sm items-center ${isMenuOpen ? "grid grid-cols-2 justify-start place-items-start place-content-start bg-gradient-to-b from-slate-950 to-[rgba(0,0,0,0.1)] p-4 h-screen" : " hidden"
                             }`}
                     >
-                        <Button asChild className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5">
+                        <Button asChild onClick={() => setIsMenuOpen(!isMenuOpen)} className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5md:w-auto w-full">
                             <Link href="/">Home</Link>
                         </Button>
-                        <Button asChild className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5">
+                        <Button asChild onClick={() => setIsMenuOpen(!isMenuOpen)} className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5md:w-auto w-full">
                             <Link href="/blogs">Blogs</Link>
                         </Button>
-                        <Button asChild className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5">
+                        <Button asChild onClick={() => setIsMenuOpen(!isMenuOpen)} className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5md:w-auto w-full">
                             <Link href="/legal">Legal</Link>
                         </Button>
-                        <Button asChild className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5">
+                        <Button asChild onClick={() => setIsMenuOpen(!isMenuOpen)} className="dark:bg-[rgba(225,225,225,0.1)] border-2 border-[rgba(225,225,225,0.1)] rounded-full dark:text-slate-50 backdrop-blur-xl dark:hover:bg-[rgba(225,225,225,0.2)] text-lg py-3 px-5md:w-auto w-full">
                             <Link href="/privacy-policy">Privacy Policy</Link>
                         </Button>
                     </nav>
@@ -65,20 +65,26 @@ export default function Navbar() {
                             className="inline-flex w-10 h-10 justify-center items-center hover:bg-slate-100 dark:hover:bg-[rgba(225,225,225,0.1)] rounded lg:hidden"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={1.5}
-                                stroke="currentColor"
-                                className="w-4 h-4"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M3.75 9h16.5m-16.5 6.75h16.5"
-                                />
-                            </svg>
+                            {isMenuOpen ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={1.5}
+                                    stroke="currentColor"
+                                    className="w-4 h-4"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M3.75 9h16.5m-16.5 6.75h16.5"
+                                    />
+                                </svg>
+                            )}
                         </button>
                     </div>
                 </div>
