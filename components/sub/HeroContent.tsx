@@ -9,6 +9,7 @@ import {
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import HeroImg from "@/assets/mainIconsdark.svg";
 
 const HeroContent = () => {
   return (
@@ -66,7 +67,7 @@ const HeroContent = () => {
         className="w-full h-full flex justify-center items-center"
       >
         <Image
-          src="/mainIconsdark.svg"
+          src={HeroImg}
           alt="work icons"
           height={650}
           width={650}

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-
+import LockImg from "@/assets/LockTop.png";
+import LockMain from "@/assets/LockMain.png";
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
 import Image from "next/image";
@@ -25,14 +26,16 @@ const Encryption = () => {
       <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
         <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
           <Image
-            src="/LockTop.png"
+            src={LockImg}
+            placeholder='blur'
             alt="Lock top"
             width={50}
             height={50}
             className="w-[50px] translate-y-5 transition-all duration-200 group-hover:translate-y-11"
           />
           <Image
-            src="/LockMain.png"
+            src={LockMain}
+            placeholder='blur'
             alt="Lock Main"
             width={70}
             height={70}

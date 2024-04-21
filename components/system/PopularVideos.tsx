@@ -31,6 +31,7 @@ const PopularVideos = () => {
                             <div className="Patd-Card-banner relative w-full h-auto flex flex-col items-center justify-center text-center">
                                 <Image
                                     src={CardVid}
+                                    placeholder="blur"
                                     alt="Video"
                                     className="relative w-full h-auto min-h-[250px] lg:h-[600px] rounded-[20px] object-cover object-center filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                                 />
@@ -72,6 +73,7 @@ const PopularVideos = () => {
                                     <Image
                                         src={CardImg1}
                                         alt="Image"
+                                        placeholder="blur"
                                         className="relative w-full h-auto md:h-[200px] rounded-[20px] object-cover object-center filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                                     />
                                     <button className="absolute z-10 w-[45px] h-[45px] bg-white rounded-[50%] inline-flex items-center justify-center text-center text-black text-[17px] bg-blend-multiply">
@@ -101,6 +103,7 @@ const PopularVideos = () => {
                                     <Image
                                         src={CardImg2}
                                         alt="Image"
+                                        placeholder="blur"
                                         className="relative w-full h-auto md:h-[200px] rounded-[20px] object-cover object-center filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                                     />
                                     <button className="absolute z-10 w-[45px] h-[45px] bg-white rounded-[50%] inline-flex items-center justify-center text-center text-black text-[17px] bg-blend-multiply">
@@ -130,6 +133,7 @@ const PopularVideos = () => {
                                     <Image
                                         src={CardImg3}
                                         alt="Image"
+                                        placeholder="blur"
                                         className="relative w-full h-auto md:h-[200px] rounded-[20px] object-cover object-center filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                                     />
                                     <button className="absolute z-10 w-[45px] h-[45px] bg-white rounded-[50%] inline-flex items-center justify-center text-center text-black text-[17px] bg-blend-multiply">
@@ -159,6 +163,7 @@ const PopularVideos = () => {
                                     <Image
                                         src={CardImg4}
                                         alt="Image"
+                                        placeholder="blur"
                                         className="relative w-full h-auto md:h-[200px] rounded-[20px] object-cover object-center filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                                     />
                                     <button className="absolute z-10 w-[45px] h-[45px] bg-white rounded-[50%] inline-flex items-center justify-center text-center text-black text-[17px] bg-blend-multiply">

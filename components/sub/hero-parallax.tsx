@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import Link from "next/link";
+import Image from "next/image";
 
 interface Product {
   title: string;
@@ -167,10 +168,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
         href={product.link}
         className="block group-hover/product:shadow-2xl "
       >
-        <img
+        <Image
           src={product.thumbnail}
-          height="600"
-          width="600"
+          height={600}
+          width={600}
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />

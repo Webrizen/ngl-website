@@ -1,7 +1,14 @@
-import LogoCloudSection from '@/components/sub/LogoCloudSection';
 import React from 'react';
+import LogoCloudSection from '@/components/sub/LogoCloudSection';
+import fs from "node:fs/promises";
+import { getPlaiceholder } from "plaiceholder";
+import Image from 'next/image';
 
-export default function page() {
+export default async function page() {
+  const src1 = "/owner1.jpeg";
+  const src2 = "/owner2.jpeg";
+  const buffer1 = await fs.readFile(`./public${src1}`);
+  const { base64 } = await getPlaiceholder(buffer1);
   return (
     <>
       <section className="mx-auto container px-4 md:px-8 py-20 pt-24">
@@ -14,11 +21,11 @@ export default function page() {
 
           <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
             <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:left-16 md:top-16 lg:ml-0">
-              <img src="/owner1.jpeg" loading="lazy" alt="Photo by Kaung Htet" className="h-full w-full object-cover object-center" />
+              <Image src={src1.replace('./public', '')} width={400} height={800} placeholder='blur' blurDataURL={base64} loading="lazy" alt="Photo by Kaung Htet" className="h-full w-full object-cover object-center" />
             </div>
 
             <div className="overflow-hidden rounded-lg bg-gray-100 shadow-lg">
-              <img src="/owner2.jpeg" loading="lazy" alt="Photo by Manny Moreno" className="h-full w-full object-cover object-center" />
+              <Image src={src2.replace('./public', '')} width={400} height={800} placeholder='blur' blurDataURL={base64} loading="lazy" alt="Photo by Manny Moreno" className="h-full w-full object-cover object-center" />
             </div>
           </div>
         </div>

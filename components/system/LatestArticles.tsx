@@ -31,6 +31,7 @@ const LatestArticles = () => {
                                 layout="fixed"
                                 width={1000} // Set a large width for the initial rendering
                                 height={230}
+                                placeholder="blur"
                                 className="relative w-full h-[230px] object-cover object-center rounded-[0px] filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                                 alt="Article Image"
                             />
@@ -66,6 +67,7 @@ const LatestArticles = () => {
                                 layout="fixed"
                                 width={1000} // Set a large width for the initial rendering
                                 height={230}
+                                placeholder="blur"
                                 className="relative w-full h-[230px] object-cover object-center rounded-[0px] filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                                 alt="Article Image"
                             />
@@ -101,6 +103,7 @@ const LatestArticles = () => {
                                 layout="fixed"
                                 width={1000} // Set a large width for the initial rendering
                                 height={230}
+                                placeholder="blur"
                                 className="relative w-full h-[230px] object-cover object-center rounded-[0px] filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                                 alt="Article Image"
                             />
@@ -136,6 +139,7 @@ const LatestArticles = () => {
                                 layout="fixed"
                                 width={1000} // Set a large width for the initial rendering
                                 height={230}
+                                placeholder="blur"
                                 className="relative w-full h-[230px] object-cover object-center rounded-[0px] filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                                 alt="Article Image"
                             />

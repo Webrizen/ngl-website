@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import FeatureImg from "@/assets/4.png";
+import Image from 'next/image';
 
 interface Feature {
     title: string;
@@ -73,7 +75,7 @@ export default function Features() {
                         </div>
                         <p
                             className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we are transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</p>
-                        <img src="/4.png" alt="Image" className='md:w-[300px] w-[150px] md:h-[300px] h-[150px] aspect-square absolute right-2 md:top-0 -top-[70%]  bottom-0 my-auto' />
+                        <Image src={FeatureImg} placeholder='blur' alt="Image" className='md:w-[300px] w-[150px] md:h-[300px] h-[150px] aspect-square absolute right-2 md:top-0 -top-[70%]  bottom-0 my-auto' />
                     </div>
                     <div className="mt-16 flex flex-col md:flex-row gap-8 xl:gap-10">
                         <div className="md:w-96 lg:w-[26rem] space-y-5 flex flex-col md:py-6">
