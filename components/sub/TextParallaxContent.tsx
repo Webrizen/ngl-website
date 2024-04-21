@@ -263,7 +263,7 @@ const ExampleContent = ({ longdescription, description, title }: any) => (
                 <DrawerContent className="w-full">
                     <DrawerHeader className="max-w-7xl mx-auto">
                         <DrawerTitle className="text-4xl font-bold text-neutral-200 my-3">{title || "Loading..."}</DrawerTitle>
-                        <DrawerDescription className="text-neutral-400 text-lg h-[55vh] overflow-y-auto custom_y_scrollbar_design">
+                        <DrawerDescription className="text-neutral-400 text-lg h-[65vh] overflow-y-auto custom_y_scrollbar_design">
                             <div className="h-min" dangerouslySetInnerHTML={{ __html: longdescription }} />
                             <section className="text-gray-300 max-w-7xl mx-auto">
                                 <div className="w-full flex p-5 md:flex-row flex-col items-center">
