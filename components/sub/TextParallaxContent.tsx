@@ -55,7 +55,25 @@ Join us at NGL Agency and embark on a journey to create transformative digital e
                 <ExampleContent
                     title="UX/UI Designer - Crafting Intuitive Digital Experiences"
                     description="Join NGL Agency as a UX/UI Designer and lead the creation of intuitive interfaces that seamlessly blend aesthetics with functionality. Collaborate with cross-functional teams to transform complex concepts into user-centric designs."
-                    longdescription=""
+                    longdescription={`
+                    Are you a creative thinker with a passion for user experience design? NGL Agency is seeking a talented UX/UI Designer to join our collaborative team. As a UX/UI Designer, you will be instrumental in shaping digital products and experiences that resonate with users on a profound level. From wireframes to prototypes, you'll leverage your design expertise to craft visually compelling and user-friendly interfaces.
+<br/><br/>
+Responsibilities:
+<br/><br/>
+Conduct user research and gather insights to inform design decisions.
+Create wireframes, prototypes, and visual designs that effectively communicate design concepts and interactions.
+Collaborate closely with frontend engineers and backend developers to ensure seamless integration of design solutions.
+Iterate on designs based on user feedback, usability testing, and data analysis.
+Maintain brand consistency and adhere to design guidelines throughout the design process.
+Qualifications:
+<br/><br/>
+Bachelor's degree in Design, Human-Computer Interaction, or a related field.
+Proven experience in UX/UI design, with a strong portfolio showcasing your design process and outcomes.
+Proficiency in design tools such as Sketch, Adobe XD, Figma, or similar.
+Solid understanding of user-centered design principles and methodologies.
+Excellent communication and collaboration skills, with the ability to articulate design decisions and rationale.
+Join us at NGL Agency and embark on a journey to create transformative digital experiences that leave a lasting impression. Apply now and let's redefine the future of design together!
+                    `}
                 />
             </TextParallaxContent>
             <TextParallaxContent
@@ -66,7 +84,26 @@ Join us at NGL Agency and embark on a journey to create transformative digital e
                 <ExampleContent
                     title="Full Stack Developer - Building Robust Digital Solutions"
                     description="Join NGL Agency as a Full Stack Developer and drive the development of robust digital solutions from concept to deployment. Collaborate with multidisciplinary teams to architect, implement, and maintain scalable web applications."
-                    longdescription=""
+                    longdescription={`
+                    Are you a versatile developer with a passion for building innovative web applications? NGL Agency is seeking a skilled Full Stack Developer to join our dynamic team. As a Full Stack Developer, you will play a key role in developing end-to-end solutions that empower our clients to thrive in the digital landscape. From frontend interfaces to backend logic, you'll leverage your expertise to deliver high-quality, performant applications.
+                    <br/><br/>
+Responsibilities:
+<br/><br/>
+Develop frontend components and features using modern web technologies such as HTML5, CSS3, and JavaScript frameworks (e.g., React, Angular, Vue.js).
+Design and implement backend services and APIs using server-side technologies (e.g., Node.js, Python, Ruby on Rails).
+Collaborate with designers, UX/UI specialists, and other developers to translate requirements into technical solutions.
+Write clean, maintainable code and conduct thorough testing to ensure software quality and reliability.
+Stay updated on emerging technologies and best practices in full stack development.
+Qualifications:
+<br/><br/>
+Bachelor's degree in Computer Science, Engineering, or a related field.
+Proven experience in full stack development, with a strong portfolio showcasing your projects and contributions.
+Proficiency in both frontend and backend technologies, with a solid understanding of software architecture and design patterns.
+Experience with databases and ORM frameworks (e.g., SQL, MongoDB, Sequelize).
+Strong problem-solving skills and attention to detail.
+Excellent communication and teamwork abilities.
+Join us at NGL Agency and be part of a collaborative environment where your expertise and creativity will drive the development of innovative digital solutions. Apply now and let's build something extraordinary together!
+                    `}
                 />
             </TextParallaxContent>
             <TextParallaxContent
@@ -77,7 +114,26 @@ Join us at NGL Agency and embark on a journey to create transformative digital e
                 <ExampleContent
                     title="Digital Marketing Specialist - Driving Online Engagement Strategies"
                     description="Join NGL Agency as a Digital Marketing Specialist and lead the development and execution of data-driven marketing campaigns. Harness your expertise in SEO, SEM, and social media to amplify brand presence and drive measurable results."
-                    longdescription=""
+                    longdescription={`
+                    Are you a strategic thinker with a knack for digital marketing? NGL Agency is seeking a results-oriented Digital Marketing Specialist to join our team. As a Digital Marketing Specialist, you will be responsible for devising and implementing comprehensive marketing strategies that maximize online visibility and engagement. From SEO optimization to content marketing, you'll leverage your analytical skills to drive meaningful outcomes for our clients.
+                    <br/><br/>
+Responsibilities:
+<br/><br/>
+Develop and execute digital marketing campaigns across various channels, including search engines, social media, email, and display advertising.
+Conduct keyword research, competitor analysis, and audience segmentation to inform marketing strategies.
+Create compelling content, including blog posts, social media posts, and ad copy, that resonates with target audiences.
+Monitor and analyze campaign performance metrics, such as traffic, conversion rates, and ROI, to optimize marketing efforts.
+Stay abreast of industry trends and best practices in digital marketing to drive continuous improvement.
+Qualifications:
+<br/><br/>
+Bachelor's degree in Marketing, Communications, or a related field.
+Proven experience in digital marketing, with a track record of successfully executing campaigns across multiple channels.
+Expertise in SEO, SEM, and PPC advertising, with proficiency in tools such as Google Analytics, Google Ads, and SEO platforms.
+Strong analytical skills and the ability to derive actionable insights from data.
+Excellent communication and writing skills, with a creative flair for content creation.
+Ability to thrive in a fast-paced, collaborative environment.
+Join us at NGL Agency and be part of a dynamic team where your passion for digital marketing will drive measurable results for our clients. Apply now and let's elevate brands together in the digital space!
+`}
                 />
             </TextParallaxContent>
         </div>
