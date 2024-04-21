@@ -12,6 +12,8 @@ import {
     DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 
 export const TextParallaxContentExample = () => {
     return (
@@ -202,29 +204,74 @@ const ExampleContent = ({ longdescription, description, title }: any) => (
                         Apply Now
                     </button>
                 </DrawerTrigger>
-                <DrawerContent className="overflow-y-auto">
+                <DrawerContent className="w-full">
                     <DrawerHeader className="max-w-7xl mx-auto">
                         <DrawerTitle className="text-4xl font-bold text-neutral-200 my-3">{title || "Loading..."}</DrawerTitle>
-                        <DrawerDescription className="text-neutral-400 text-lg"><div dangerouslySetInnerHTML={{ __html: longdescription }} /></DrawerDescription>
+                        <DrawerDescription className="text-neutral-400 text-lg h-min"><div className="h-min" dangerouslySetInnerHTML={{ __html: longdescription }} /></DrawerDescription>
                     </DrawerHeader>
-                    <section className="text-gray-300 body-font">
-                        <div className="max-w-7xl mx-auto flex p-5 md:flex-row flex-col items-center">
+                    <section className="text-gray-300 max-w-7xl mx-auto">
+                        <div className="w-full flex p-5 md:flex-row flex-col items-center">
                             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                                 <img className="object-cover object-center rounded" alt="hero" src="/logo.png" />
                             </div>
                             <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-50">Thank you for showing us your interest to join us! We're coming back to you very quickly
+                                <h1 className="title-font md:text-2xl text-xl mb-4 font-medium text-gray-50">Thank you for showing us your interest to join us! We're coming back to you very quickly
                                 </h1>
-                               ...
+                                <form className="w-full">
+                                    <div className="mb-4">
+                                        <label htmlFor="name" className="block text-lg font-medium text-slate-200">Name</label>
+                                        <Input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="mb-4">
+                                        <label htmlFor="email" className="block text-lg font-medium text-slate-200">Email</label>
+                                        <Input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="mb-4">
+                                        <label htmlFor="message" className="block text-lg font-medium text-slate-200">Message</label>
+                                        <Textarea
+                                            id="message"
+                                            name="message"
+                                            rows={4}
+                                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="mb-4">
+                                        <label htmlFor="resume" className="block text-lg font-medium text-slate-200">Resume</label>
+                                        <Input
+                                            type="file"
+                                            id="resume"
+                                            name="resume"
+                                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="flex flex-row w-full gap-4 justify-start items-center">
+                                        <Button
+                                            type="submit"
+                                        >
+                                            Apply Now
+                                        </Button>
+                                        <DrawerClose>
+                                            <Button variant="outline">Cancel</Button>
+                                        </DrawerClose>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </section>
-                    <DrawerFooter className="max-w-7xl mx-auto flex flex-row w-full justify-start items-center">
-                        <Button>Submit</Button>
-                        <DrawerClose>
-                            <Button variant="outline">Cancel</Button>
-                        </DrawerClose>
-                    </DrawerFooter>
                 </DrawerContent>
             </Drawer>
         </div>
