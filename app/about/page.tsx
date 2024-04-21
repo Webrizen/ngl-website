@@ -1,3 +1,4 @@
+import LogoCloudSection from '@/components/sub/LogoCloudSection';
 import React from 'react';
 
 export default function page() {
@@ -308,6 +309,7 @@ export default function page() {
           </div>
         </div>
       </div>
+      <LogoCloudSection />
       <div className="bg-transparent py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <div className="flex flex-col overflow-hidden rounded-lg bg-[rgba(225,225,225,0.1)] backdrop-blur-3xl sm:flex-row md:h-80">

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+}
+
 .Welcome-box {
   isolation: isolate;
   overflow: hidden;
