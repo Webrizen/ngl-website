@@ -24,6 +24,59 @@
   transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
 }
 
+.text-ani {
+  animation: SpinBackground 5s infinite ease-in-out;
+  margin-bottom: 1rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-color 0.5s ease;
+}
+
+
+@keyframes SpinBackground {
+  0% {
+    background: linear-gradient(50deg, white, white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  100% {
+    background: linear-gradient(50deg, blue, cyan);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+.text-ani-now {
+  animation: SpinBackgroundNow 5s infinite ease-in-out;
+  margin-bottom: 1rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-color 0.5s ease;
+}
+
+
+@keyframes SpinBackgroundNow {
+  0% {
+    background: linear-gradient(50deg, blue, cyan);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  100% {
+    background: linear-gradient(50deg, white, white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+
 @keyframes moveUpDown {
   0% {
     transform: translateY(0);

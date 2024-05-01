@@ -8,97 +8,40 @@ import HeroImage5 from "@/assets/hero-images/5.png";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion"
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 const Hero = () => {
   return (
-    <section className="py-32 sm:py-36 lg:py-40 min-h-screen md:overflow-x-clip overflow-x-hidden flex items-center relative">
-      <div className="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-purple-600/70
-  backdrop-filter blur-3xl opacity-50" />
-      <div className="absolute bottom-0 right-0 translate-x-[54%] translate-y-[70%] w-2/5 rounded-full aspect-square bg-purple-600/70
-  backdrop-filter blur-3xl opacity-50" />
-      <div className="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-r from-purple-400/5 right-0
-  -translate-y-[40%] translate-x-[40%] top-0">
-        <div className="inset-[10%] rounded-full bg-gradient-to-l from-purple-400/20">
-          <div className="absolute inset-[20%] rounded-full bg-gradient-to-l from-purple-400/30" />
-        </div>
-      </div>
-      <div className="absolute min-w-[300px] w-[48%] md:w-2/5 aspect-square rounded-full bg-gradient-to-l from-purple-400/5 left-0
-  translate-y-[40%] -translate-x-[40%] bottom-0">
-        <div className="inset-[10%] rounded-full bg-gradient-to-r from-purple-400/40">
-          <div className="absolute inset-[20%] rounded-full bg-gradient-to-r from-purple-400/50" />
-        </div>
-      </div>
-      <motion.div
-        drag
-        dragConstraints={{
-          top: -50,
-          left: -50,
-          right: 50,
-          bottom: 50,
-        }} className="absolute md:top-1/2 top-[70%] left-[10%] md:w-[200px] w-[80px] h-auto z-50 move-up-down">
-        <Image src={HeroImage1} placeholder="blur" alt="hero-image" width={500} height={500} />
-      </motion.div>
-      <motion.div
-        drag
-        dragConstraints={{
-          top: -50,
-          left: -50,
-          right: 50,
-          bottom: 50,
-        }} className="absolute md:bottom-1/2 top-[10%] right-[10%] md:w-[200px] w-[80px] h-auto z-50 move-up-down-slow">
-        <Image src={HeroImage2} placeholder="blur" alt="hero-image" width={500} height={500} />
-      </motion.div>
-      <motion.div
-        drag
-        dragConstraints={{
-          top: -50,
-          left: -50,
-          right: 50,
-          bottom: 50,
-        }} className="absolute top-[20%] left-[15%] md:w-[200px] w-[80px] h-auto -z-10 filter blur-md move-up-down-slow-bg">
-        <Image src={HeroImage3} placeholder="blur" alt="hero-image" width={500} height={500} />
-      </motion.div>
-      <motion.div
-        drag
-        dragConstraints={{
-          top: -50,
-          left: -50,
-          right: 50,
-          bottom: 50,
-        }} className="absolute bottom-[20%] right-[15%] md:w-[200px] w-[80px] h-auto -z-10 filter blur-lg move-up-down-slow-bg">
-        <Image src={HeroImage4} placeholder="blur" alt="hero-image" width={500} height={500} />
-      </motion.div>
-      <motion.div
-        drag
-        dragConstraints={{
-          top: -50,
-          left: -50,
-          right: 50,
-          bottom: 50,
-        }} className="absolute md:top-[10%] bottom-[50%] right-[40%] md:w-[200px] w-[80px] h-auto -z-10 filter blur-sm move-up-down-slow-bg">
-        <Image src={HeroImage5} placeholder="blur" alt="hero-image" width={500} height={500} />
-      </motion.div>
-      <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
-        <div className="text-center flex flex-col items-center space-y-10">
-          <span className="border border-gray-500 px-3 py-0.5 rounded-full bg-gray-50 dark:bg-gray-950 bg-opacity-50 text-gray-700 dark:text-gray-300">
-            Creativity in mind
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl/tight xl:text-7xl/tight text-gray-900 dark:text-white font-bold max-w-4xl capitalize">
-            We inspire Growth for your business brand
+    <section className="py-32 md:pt-40 min-h-screen bg-[url('/bg.svg')] bg-cover bg-bottom bg-no-repeat md:overflow-x-clip flex justify-center items-center relative">
+      <div className="mx-auto container h-full flex justify-center items-center w-full px-5 md:px-2">
+        <div className="text-center flex flex-col items-center space-y-5">
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="dark:bg-black bg-white text-black text-sm dark:text-white flex items-center"
+          >
+            <span>Neo Great Line</span>
+          </HoverBorderGradient>
+          <h1 className="text-4xl md:text-9xl text-gray-900 dark:text-white font-bold capitalize">
+            We inspire <span className="text-ani">Growth</span> for your <span className="text-ani-now">business</span> brand
           </h1>
-          <p className="text-base text-gray-700 dark:text-gray-300 text-center max-w-xl">
+          <p className="text-xl text-gray-700 dark:text-gray-300 text-center max-w-5xl">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique deleniti earum, qui odio,
             dolorum labore incidunt ad ab porro, provident excepturi molestiae corporis molestias nam accusamus.
           </p>
-          <div className="flex justify-center">
-            <Link href="#" className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-purple-700 text-white hover:bg-opacity-80">
-              Let's talk
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                  <path fillRule="evenodd" d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z" clipRule="evenodd" />
-                </svg>
+          <div className="flex justify-center gap-4">
+            <a href="#_" className="relative inline-flex items-center justify-center p-4 px-10 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500">
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+              <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+              <span className="relative text-white">Let's Talk</span>
+            </a>
+            <a href="#_" className="relative inline-flex items-center justify-center p-4 px-10 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+              <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </span>
-            </Link>
+              <span className="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">Portfolio</span>
+              <span className="relative invisible">Portfolio</span>
+            </a>
           </div>
         </div>
       </div>
